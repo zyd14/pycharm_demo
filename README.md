@@ -23,13 +23,13 @@ Files which have been modified since the last commit will be highlighted in blue
 files you've touched.
 
 ##Key shortcuts: 
-- **⌘-k** will bring up a commit dialog box, listing all the files that have been modified.  You can 
+- **⌘k** will bring up a commit dialog box, listing all the files that have been modified.  You can 
 uncheck the checkbox next to each file that you don't want included in the commit
 
 - **fn+⇧+k** will bring up the push menu, and will include all the commits which will be pushed as a result of
 this action.
 
-- **⌘-b** will take you to the closest (scope-wise) definition of a variable you have high-lighted, whether that's
+- **⌘b** will take you to the closest (scope-wise) definition of a variable you have high-lighted, whether that's
 in the current function or deep in some third-party library in your virtual environment.  I find this one
 to be invaluable when trying to trace back clues as to why an object isn't behaving the way I think it should,
 and overall better understand how those objects work.
@@ -37,6 +37,14 @@ and overall better understand how those objects work.
 - **⌥⇧E** will allow you to execute any highlighted code in an IPython console which will automatically appear.
 The console will contain the state of any state from previous code executions in that console, but can be easily 
 reset using the 'return' button along the Python Console toolbar
+
+##Object inspection, completion
+When working with objects that may have lots of methods on them, it can be easy to forget what methods are available.
+By simply typing a variable which has been prior been assigned a type (through just assigning it a value, Py3 method signature type hints,
+or in-line type hints) and typing the '.' operator, a list of all properties and methods of that variable will appear in a dropdown.
+Furthermore, onces you've selected a method and are beginning to feed it parameters, you can type **⌘p** from within the method
+parentheses to list all the parameters the function takes.  If you'd like to know more about how the function itself works,
+you can jump to its definition by highlighting it and typing **⌘b**
 
 
 ##Testing
@@ -64,7 +72,7 @@ keep track of the value of an interesting variable.  Collections and objects in 
 give you the ability to drill-down through their attributes as well if you would like to further interrogate them.
 
 ##Refactoring
-Remember when you though 'racoon' would be a funny name for a variable? And then that racoon persisted throughout the project,
+Remember when you though 'xfddssd' would be a funny name for a variable? And then that racoon persisted throughout the project,
 leaving its trail everywhere and leaving you and your teammates to try to figure out what a racoon object is in the context
 of bioinformatics?  Pycharm makes refactoring of variable / object names extremely easy.  Simply highlight the variable 
 or object you want to rename, click >**Refoactor**, then click \> **Rename**.  Pycharm will then search for any reference
