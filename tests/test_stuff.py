@@ -6,5 +6,5 @@ def test_a_bit():
     a = 1
     b = 2
 
-    c = random.randint
+    c = random.randint(0,4)
     assert c > 2
