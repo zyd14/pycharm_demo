@@ -38,6 +38,9 @@ and overall better understand how those objects work.
 The console will contain the state of any state from previous code executions in that console, but can be easily 
 reset using the 'return' button along the Python Console toolbar
 
+- **⌘y** in constrast to **⌘b**, this key command will open up a small peek window with a view of the definition of an 
+object or class you have highlighted
+
 ##Object inspection, completion
 When working with objects that may have lots of methods on them, it can be easy to forget what methods are available.
 By simply typing a variable which has been prior been assigned a type (through just assigning it a value, Py3 method signature type hints,
