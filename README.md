@@ -29,8 +29,8 @@ The console will contain the state of any state from previous code executions in
 reset using the 'return' button along the Python Console toolbar. This is super handy for testing small snippets of 
 code while you're developing.
 
-- **⇧⌘I** in constrast to **⌘b**, this key command will open up a small peek window with a view of the definition of an 
-object or class you have highlighted.
+- **⇧⌘I**  will open up a small peek window with a view of the definition of an object or class you have highlighted. This
+is in contrast to **⌘b**, which will take you directly to the module and location of the declaration of the highlighted object. 
 
 ![peek_image](https://github.com/zyd14/pycharm_demo/blob/master/peek.png)
 
