@@ -4,25 +4,14 @@ Pycharm is an incredibly powerful IDE created by JetBrains.  It comes in a free,
 and a paid-for subscription edition.  To be honest, I tried the professional edition just to try out
 some of the Flask support, but didn't find the cost was worth it so I stuck with the community edition.
 
-##Built-ins
+## Built-ins
 Pycharm hosts a dedicated terminal which automatically detects and invokes any virturl en
 
-##Getting Started
+## Getting Started
 
-1. Get Pycham CE [here](https://www.jetbrains.com/pycharm/download/#section=mac)
+Get Pycham CE [here](https://www.jetbrains.com/pycharm/download/#section=mac)
 
-##Basics
-
-- VCS integration: while many of you are command-line git ninjas, I find myself pulling my hair out paging 
-through merge conflicts or diffing various commits from a history.  The VCS integration in Pycharm makes it
-easy to see what branches you're working on, whether any of those branches contain changes others don't,
-and contains a beautiful diff viewer comparing files, whether it be do resolve a merge conflict, or while 
-comparing a file to how it may have looked 6 months ago.
-
-Files which have been modified since the last commit will be highlighted in blue, making it obvious what 
-files you've touched.
-
-##Key shortcuts: 
+## Key shortcuts: 
 - **⌘k** will bring up a commit dialog box, listing all the files that have been modified.  You can 
 uncheck the checkbox next to each file that you don't want included in the commit
 
@@ -41,7 +30,7 @@ reset using the 'return' button along the Python Console toolbar
 - **⌘y** in constrast to **⌘b**, this key command will open up a small peek window with a view of the definition of an 
 object or class you have highlighted
 
-##Object inspection, completion
+## Object inspection, completion
 When working with objects that may have lots of methods on them, it can be easy to forget what methods are available.
 By simply typing a variable which has been prior been assigned a type (through just assigning it a value, Py3 method signature type hints,
 or in-line type hints) and typing the '.' operator, a list of all properties and methods of that variable will appear in a dropdown.
@@ -50,17 +39,17 @@ parentheses to list all the parameters the function takes.  If you'd like to kno
 you can jump to its definition by highlighting it and typing **⌘b**
 
 
-##Testing
+## Testing
 Pycharm's testing abilities really help make this project shine.  From within the Prefences menu you have can select
 Tools \> Python Integrated Tools.  From here you can choose your favorite test runner (mine happens to be pytest), which
 will tell PyCharm what tool to use when detecting and running tests in your project.  
 
-(test_ex.png)
+![Test Suite](https://github.com/zyd14/pycharm_demo/blob/master/test_ex.png)
 
 By going to the **Test Configurations** menu under the **Run** menu dropdown you can make custom test
 run configurations for particular modules or scripts, with different test runners or runtime parameters.
 
-###Debugging
+### Debugging
 While debugging doesn't always have to occur during a unittest, they often go hand in hand.  Say you've got a test that
 is failing and you just don't know why.  Don't you which you could freeze the test right in the middle, inspect the variables
 and see which one contains the erroneous value that is making the test puke?
@@ -74,7 +63,9 @@ You can also add variables to a watch list from this window, so that if the test
 keep track of the value of an interesting variable.  Collections and objects in the **Variables** window will
 give you the ability to drill-down through their attributes as well if you would like to further interrogate them.
 
-##Refactoring
+![File ran with debugger](https://github.com/zyd14/pycharm_demo/blob/master/debugger.png)
+
+## Refactoring
 Remember when you though 'xfddssd' would be a funny name for a variable? And then that racoon persisted throughout the project,
 leaving its trail everywhere and leaving you and your teammates to try to figure out what a racoon object is in the context
 of bioinformatics?  Pycharm makes refactoring of variable / object names extremely easy.  Simply highlight the variable 
@@ -83,13 +74,27 @@ to that variable and present you with a list of all the places throughout the en
 all of them it's as easy as clicking 'Do Refactor'.  I've found this incredibly useful for changing object names to be more
 clear about their purpose, without having to hunt through scores of modules to determine where they occur. 
 
-##Find Usages
-Sometimes you find a seemingly important variable or method that might need to be changed, but have no idea where it's being used or 
-how it's being used.  By highlighting the object, right-clicking and clicking **Find Usages...** a small pop-up window will
-show where that varible is referenced throughout the entire file. This is particularly helpful for when you're cleaning up
-cruft and want to know if you can delete something.  'No Usages Found'? Deleted.
+## Find Usages
+Sometimes you find a seemingly important variable or method that might need to be changed, but have no idea where it's being used or how it's being used.  By highlighting the object, right-clicking and clicking **Find Usages...** a small pop-up window will show where that varible is referenced throughout the entire project. This is particularly helpful for when you're cleaning up cruft and want to know if you can delete something.  'No Usages Found'? Deleted.
 
-##Jupyter Notebook
+## Customized lint-hinting
+PyCharm comes with a huge number of different of type and style hints to conform to PEP-8 and avoid some logic errors, particularly if you use the Python 3 type declarations in your code.  Which hints to receive, as well as their presentation attributes, can be set in the **Preferences** menu under the **Editor** tab.
+
+## VCS integrations
+While many of you are command-line git ninjas, I find myself pulling my hair out paging 
+through merge conflicts or diffing various commits from a history.  The VCS integration in Pycharm makes it
+easy to see what branches you're working on, whether any of those branches contain changes others don't,
+and contains a beautiful diff viewer comparing files, whether it be do resolve a merge conflict, or while 
+comparing a file to how it may have looked 6 months ago.
+
+Files which have been modified since the last commit will be highlighted in blue, making it obvious what 
+files you've touched.
+
+Diff window comparing two conflicting files and showing the file resulting from how you merge the conflict.
+![Merge Conflict differ](https://github.com/zyd14/pycharm_demo/blob/master/merge_viewer.png)
+
+
+## Jupyter Notebook
 
 Pycharm is capable of running Jupyter Notebooks.  This is far from my area of expertise, but the community edition 
 of Pycharm does appear to support it.  A very basic jupyter notebook file is included in this project repo to show that it
@@ -97,11 +102,11 @@ can be done.  The kernel running the Jupyter Notebook can be configured similarl
 Go to the **Run** window dropdown, click > **Edit Configurations..** and select an item from the drop down below **Jupter Notebooks**
 on the left side of the window that appears.
 
-##README writing
+## README writing
 When writing any markdown file (ending with .md), PyCharm automatically picks it up as a markdown file and gives you the option
 to view the rendered markdown side-by-side with your markdown file as you create it.
 
-##Extensions
+## Extensions
 There are lots of various plugins for PyCharm that can be accessed through the **Preferences** tab, for various things like
 vim keyboard mappings, SQL highlighting and completion, bash completion, ticketing-service integrations, etc.
 
@@ -112,7 +117,7 @@ issue tracker integrations, including JIRA, Trello, and GitLab.
 
 There are also various tools to enable easier development in cloud applications.  
 
-##Other languages
+## Other languages
 Pycharm attempts to provide basic code highlighting and completion (like closing tags in HTML) in various languages,
 including HTML, SQL, and Docker.  The professional version provides better syntax highlighting for things like Django and 
 Jinja2 templates (and I think some light-weight javascript highlighting?), but
