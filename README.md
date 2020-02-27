@@ -69,13 +69,21 @@ give you the ability to drill-down through their attributes as well if you would
 Remember when you though 'xfddssd' would be a funny name for a variable? And then that racoon persisted throughout the project,
 leaving its trail everywhere and leaving you and your teammates to try to figure out what a racoon object is in the context
 of bioinformatics?  Pycharm makes refactoring of variable / object names extremely easy.  Simply highlight the variable 
-or object you want to rename, click >**Refoactor**, then click \> **Rename**.  Pycharm will then search for any reference
+or object you want to rename, click >**Refactor**, then click \> **Rename**.  Pycharm will then search for any reference
 to that variable and present you with a list of all the places throughout the entire project that the highlighted variable occurs.  If you'd like to rename 
 all of them it's as easy as clicking 'Do Refactor'.  I've found this incredibly useful for changing object names to be more
 clear about their purpose, without having to hunt through scores of modules to determine where they occur. 
 
 ## Find Usages
 Sometimes you find a seemingly important variable or method that might need to be changed, but have no idea where it's being used or how it's being used.  By highlighting the object, right-clicking and clicking **Find Usages...** a small pop-up window will show where that varible is referenced throughout the entire project. This is particularly helpful for when you're cleaning up cruft and want to know if you can delete something.  'No Usages Found'? Deleted.
+
+Right-clicking an object opens a menu which contains the 'Find Usages...' button:  
+![find usages example](https://github.com/zyd14/pycharm_demo/blob/master/find_usages.png)
+
+After clicking the 'Find Usages' button, a pane will open listing all the usages of that object found throughout the
+project, presented in a tree-like fashion.  Double-clicking on any of these usages will take you directly to that location
+in the code. 
+![found_usages_example](https://github.com/zyd14/pycharm_demo/blob/master/found_usages.png)
 
 ## Customized lint-hinting
 PyCharm comes with a huge number of different of type and style hints to conform to PEP-8 and avoid some logic errors, particularly if you use the Python 3 type declarations in your code.  Which hints to receive, as well as their presentation attributes, can be set in the **Preferences** menu under the **Editor** tab.
@@ -90,8 +98,8 @@ comparing a file to how it may have looked 6 months ago.
 Files which have been modified since the last commit will be highlighted in blue, making it obvious what 
 files you've touched.
 
-Diff window comparing two conflicting files and showing the file resulting from how you merge the conflict.
-![Merge Conflict differ](https://github.com/zyd14/pycharm_demo/blob/master/merge_viewer.png)
+Diff window comparing two conflicting files and showing the file resulting from how you merge the conflict.  
+![Merge Conflict differ](https://github.com/zyd14/pycharm_demo/blob/master/merge_veiwer.png)
 
 
 ## Jupyter Notebook
