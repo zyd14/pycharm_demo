@@ -11,3 +11,7 @@ def lalala():
     while z < 20:
         sleep(1)
         z += 1
+        print(z)
+
+if __name__ == '__main__':
+    lalala()
