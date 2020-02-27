@@ -13,10 +13,11 @@ Get Pycham CE [here](https://www.jetbrains.com/pycharm/download/#section=mac)
 
 ## Key shortcuts: 
 - **⌘k** will bring up a commit dialog box, listing all the files that have been modified.  You can 
-uncheck the checkbox next to each file that you don't want included in the commit
+uncheck the checkbox next to each file that you don't want included in the commit.  A diff viewer will be present for
+each file changed, allowing you to see how the file changed for this commit.
 
-- **fn+⇧+k** will bring up the push menu, and will include all the commits which will be pushed as a result of
-this action.
+- **fn+⇧+k** will bring up the push menu, and will include a list of all the commits which will be pushed as a result of
+this action, as well as the ability to view the diffs that will be applied to each changed file.
 
 - **⌘b** will take you to the closest (scope-wise) definition of a variable you have high-lighted, whether that's
 in the current function or deep in some third-party library in your virtual environment.  I find this one
@@ -25,18 +26,22 @@ and overall better understand how those objects work.
 
 - **⌥⇧E** will allow you to execute any highlighted code in an IPython console which will automatically appear.
 The console will contain the state of any state from previous code executions in that console, but can be easily 
-reset using the 'return' button along the Python Console toolbar
+reset using the 'return' button along the Python Console toolbar. This is super handy for testing small snippets of 
+code while you're developing.
 
-- **⌘y** in constrast to **⌘b**, this key command will open up a small peek window with a view of the definition of an 
-object or class you have highlighted
+- **⇧⌘I** in constrast to **⌘b**, this key command will open up a small peek window with a view of the definition of an 
+object or class you have highlighted.
+
+![peek_image](https://github.com/zyd14/pycharm_demo/blob/master/peek.png)
+
+All these hotkeys and tons more can be configured iin the **Preferences > Keymap** menu.
 
 ## Object inspection, completion
 When working with objects that may have lots of methods on them, it can be easy to forget what methods are available.
 By simply typing a variable which has been prior been assigned a type (through just assigning it a value, Py3 method signature type hints,
 or in-line type hints) and typing the '.' operator, a list of all properties and methods of that variable will appear in a dropdown.
-Furthermore, onces you've selected a method and are beginning to feed it parameters, you can type **⌘p** from within the method
-parentheses to list all the parameters the function takes.  If you'd like to know more about how the function itself works,
-you can jump to its definition by highlighting it and typing **⌘b**
+Furthermore, onces you've selected a method and are beginning to feed it parameters, you can type **⌘p** from within the method parentheses to list all the parameters the function takes.  If you'd like to know more about how the function itself
+works, you can jump to its definition by highlighting it and typing **⌘b**
 
 
 ## Testing
@@ -86,7 +91,8 @@ in the code.
 ![found_usages_example](https://github.com/zyd14/pycharm_demo/blob/master/found_usages.png)
 
 ## Customized lint-hinting
-PyCharm comes with a huge number of different of type and style hints to conform to PEP-8 and avoid some logic errors, particularly if you use the Python 3 type declarations in your code.  Which hints to receive, as well as their presentation attributes, can be set in the **Preferences** menu under the **Editor** tab.
+PyCharm comes with a huge number of different of type and style hints to conform to PEP-8 and avoid some logic errors, particularly if you use the Python 3 type declarations in your code. Missing parentheses, brackets, bad indentation, unused
+variable detection, unreachable code, possibly uninitialized variables being used all can be reported with varying levels of severity. Which hints to receive, as well as their presentation attributes, can be set in the **Preferences** menu under the **Editor** tab.
 
 ## VCS integrations
 While many of you are command-line git ninjas, I find myself pulling my hair out paging 
@@ -101,6 +107,14 @@ files you've touched.
 Diff window comparing two conflicting files and showing the file resulting from how you merge the conflict.  
 ![Merge Conflict differ](https://github.com/zyd14/pycharm_demo/blob/master/merge_veiwer.png)
 
+You also have the ability to look through the git revision history of any module or folder by selecting the folder / module,
+right-clicking and selecing 'Git > Show history...'
+
+![Show History](https://github.com/zyd14/pycharm_demo/blob/master/show_history.png)
+
+This allows you to see the various concurrent branches of development for the file, as well as a diff viewer showing the 
+commit diff at each commit.  This can be super handy when trying to find where a problem was introduced, or if you need to 
+roll back to a specific commit before your last merge.
 
 ## Jupyter Notebook
 
@@ -111,8 +125,8 @@ Go to the **Run** window dropdown, click > **Edit Configurations..** and select 
 on the left side of the window that appears.
 
 ## README writing
-When writing any markdown file (ending with .md), PyCharm automatically picks it up as a markdown file and gives you the option
-to view the rendered markdown side-by-side with your markdown file as you create it.
+When writing any markdown file (ending with .md), PyCharm automatically picks it up as a markdown file and gives you the
+option to view the rendered markdown side-by-side with your markdown file as you create it.
 
 ## Extensions
 There are lots of various plugins for PyCharm that can be accessed through the **Preferences** tab, for various things like
