@@ -4,7 +4,7 @@ y = 3
 
 print(x+y)
 
-# We can drop breakpoints anywhere in our cose
+# We can drop breakpoints anywhere in our code
 
 def lalala():
     z = 5
