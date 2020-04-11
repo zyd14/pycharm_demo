@@ -5,7 +5,7 @@ and a paid-for subscription edition.  To be honest, I tried the professional edi
 some of the Flask support, but didn't find the cost was worth it so I stuck with the community edition.
 
 ## Built-ins
-Pycharm hosts a dedicated terminal which automatically detects and invokes any virturl en
+Pycharm hosts a dedicated terminal which automatically detects and invokes any virturl env
 
 ## Getting Started
 
